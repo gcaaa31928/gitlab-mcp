@@ -1,5 +1,5 @@
 {
-  "name": "@zereight/mcp-gitlab",
+  "name": "@red-huang/mcp-gitlab",
   "version": "1.0.21",
   "description": "MCP server for using the GitLab API",
   "license": "MIT",
@@ -13,23 +13,22 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=22"
   },
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "prepare": "npm run build",
-    "watch": "tsc --watch",
-    "deploy": "npm run build && npm publish"
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.0.1",
     "@types/node-fetch": "^2.6.12",
-    "node-fetch": "^3.3.2",
+    "undici": "^7.5.0",
     "zod-to-json-schema": "^3.23.5"
   },
   "devDependencies": {
     "@types/node": "^22.13.10",
     "typescript": "^5.8.2",
     "zod": "3.21.4"
-  }
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }
